@@ -1,6 +1,22 @@
-1.Activity_ID:which type of the activity the subject did coded by numbers.
+Total description:
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz are captured. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+Working steps and funtions used:
+There are two files need to handle,test file and train file ,both files contain activity data(X file), Activity ID(y file) and people attended the experiment(subject file);
+1)cbine is used to combine 3 test files into one, and 3 train files into one;
+2)rbine is used to combine test files and train files into one;
+3)colnames is used to rename the new form which contains the data of test and train;
+4)grep is used to extract mean and std as requested;
+5)merge is used to combine activity and data information together;
+6)gsub is used to replace the colume names using more descriptive ones;
+7)%>% ,group_by and summarise_all is used to get the mean data of subject,activity.
+
+Keywords instruction:
+1.Activity_ID:which type of the activity the subject did recorded by numbers(from 1 to 6).
 2.Activity_label: 6 different types of activity include walking,walking upstairs, walking downstairs,sitting,standing and laying.
-3.Subject: people attended the experiments.
+3.Subject: people attended the experiments, in this experiment, there are 30 people.
+4.the data is recorded by two dimentions, timedomain and frequencydomain
+5.body and gravity are also considered in the experiment.
 
 
 
